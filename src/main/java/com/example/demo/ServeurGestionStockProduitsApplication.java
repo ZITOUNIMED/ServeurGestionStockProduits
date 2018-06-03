@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.example.demo.entity.Produit;
-import com.example.demo.repository.ProduitRepository;
 
 @SpringBootApplication
 public class ServeurGestionStockProduitsApplication {
