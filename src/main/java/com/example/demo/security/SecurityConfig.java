@@ -18,9 +18,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http
 		.httpBasic()
 			.and()
-				.authorizeRequests().antMatchers("/api/**")
-					.hasRole("USER").antMatchers("/**").hasRole("ADMIN").and()
-						.csrf().disable().headers().frameOptions().disable();
+				.authorizeRequests()
+					.antMatchers("/api/**")
+						.hasRole("USER")
+					.antMatchers("/**")
+						.hasRole("ADMIN, USER").and()
+							.csrf().disable().headers()
+								.frameOptions().disable();
 	}
 	
 	protected void configure(AuthenticationManagerBuilder auth)

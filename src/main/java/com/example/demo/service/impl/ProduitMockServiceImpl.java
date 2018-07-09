@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.example.demo.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Produit;
+import com.example.demo.service.ICrudService;
 
 @Service
 public class ProduitMockServiceImpl implements ICrudService<Produit, Long>{
