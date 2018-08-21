@@ -11,4 +11,6 @@ public interface ICrudService<T, ID> {
 	void update(T entity);
 	
 	void delete(ID id);
+	
+	void saveAll(Iterable<T> iterable);
 }

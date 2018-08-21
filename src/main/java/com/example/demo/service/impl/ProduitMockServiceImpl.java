@@ -1,6 +1,7 @@
 package com.example.demo.service.impl;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -43,6 +44,15 @@ public class ProduitMockServiceImpl implements ICrudService<Produit, Long>{
 		Produit produit = new Produit();
 		produit.setId(id);
 		produits.remove(produit);
+	}
+
+
+	@Override
+	public void saveAll(Iterable<Produit> iterable) {
+		Iterator<Produit> iterator = iterable.iterator();
+		if(iterator.hasNext()) {
+			produits.add(iterator.next());
+		}
 	}
 
 }
