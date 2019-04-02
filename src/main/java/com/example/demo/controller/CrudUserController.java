@@ -14,7 +14,7 @@ import com.example.demo.repository.RoleRepository;
 import com.example.demo.util.RoleEnum;
 
 @RestController
-@RequestMapping("/crud_user")
+@RequestMapping("/api/crud_user")
 public class CrudUserController extends CrudController<User, Long> {
 		
 	@Autowired
