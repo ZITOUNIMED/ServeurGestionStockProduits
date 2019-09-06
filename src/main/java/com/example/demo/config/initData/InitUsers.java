@@ -39,5 +39,7 @@ public class InitUsers implements ApplicationRunner {
         admin.setRoles(Arrays.asList(roleUser, roleAdmin));
 
         userRepository.save(admin);
+
+        System.out.println("end.");
     }
 }
